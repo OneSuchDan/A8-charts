@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<!-- Metadatos para seleccionar charset y hacer responsive -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Título de la web -->
+		<title>Super Dashboard</title>
+
+		<!-- Injectamos el loader de Google -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- Injectamos el ficheros Javascript y hoja de estilos de nuesto Dashboard -->
+		<script type="module" src="charts.js"></script> 
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<!-- Título superior -->
+		<h1>10 años de medición de pobreza en México</h1>
+
+		<!-- Grid con todos los paneles -->
+		<div class="dashboard-wrapper">
+			<div id='p1' class='panel'><h2>Panel principal</h2> <div id='p1Chart'></div> </div>
+			<div id='p2' class='panel'><h2>Sub panel 1</h2> <div id='p2Chart'></div> </div>
+			<div id='p3' class='panel'><h2>Estado de Jalisco</h2> <div id='p3Chart'></div> </div>
+			<div id='p4' class='panel'><h2>Estado con mas indice de pobreza</h2> <div id='p4Chart'></div> </div>
+			<div id='p5' class='panel'><h2>Bottom panel</h2> <div id='p5Chart'></div> </div>
+		</div>
+
+		<!-- Pié de página -->
+		<div class='bottom'><a target='_blank' href=''>Made with love by Albert Coronado</a></div>
+	</body>
+</html>

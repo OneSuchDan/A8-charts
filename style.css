@@ -1,0 +1,55 @@
+/* Color de fondo gris, tipo de letra helvetica. El 'text-align: center' es para centrar el dashboard */
+body {
+	text-align: center;
+	background-color: #ececec;
+	font-family: 'Helvetica', sans-serif;
+	}
+
+/* Quitamos los margenes de los títulos tipo 2. Los de los distintos paneles */
+h2 {
+	margin: 0px;
+    margin-bottom: 10px;
+	}
+
+/* Márgenes en auto para que quede centrado en la página.
+	Tamaño máximo de 920 píxeles.
+	configuración del grid a 3 columnas con un espaciado de 15 píxeles. */
+.dashboard-wrapper {
+	margin: auto;
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+	}
+
+/* Configuración de cada panel: texto alineado a la izquierda, color de fondo blanco, etc. */
+.dashboard-wrapper .panel {
+	text-align: left;
+	background-color: #fff;
+	border: 1px solid #d3d3d3;
+	box-shadow: 0 0 4px 1px rgba(143,143,143,.2);
+	padding: 15px;
+	}
+
+/* Los paneles con Id p1 y p5 ocuparan de la columna 1 a la 4 */
+.dashboard-wrapper #p1.panel,#p2.panel,.dashboard-wrapper,#p5.panel {
+	grid-column: 1 / 4;
+	}
+/* Configuración del footer */
+.bottom {
+	font-size: 10px;
+	margin-top: 15px;
+	}
+
+.bottom a {
+	color: #333;
+	text-decoration: none;
+	}
+
+/* Configuración responsive: para dispositivos con pantalla de máximo 104 píxeles de resolución. todos los paneles ocuparán de la columna 1 a la 4 */
+@media screen and (max-width: 1024px) {
+	.dashboard-wrapper .panel {
+		grid-column: 1 / 4;
+		}	
+	}
